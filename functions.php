@@ -20,7 +20,7 @@ require_once('library/shortcodes.php');
 // Custom Backend Footer
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
 function wp_bootstrap_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://320press.com" target="_blank">320press</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
+	echo '<span id="footer-thankyou">Developed by <a href="http://punchcreative.nl" target="_blank">Punch Creative</a></span>.';
 }
 
 // adding it to the admin area
@@ -32,9 +32,9 @@ if ( ! isset( $content_width ) ) $content_width = 580;
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured', 970, 180, true );
-add_image_size( 'wpbs-featured-home', 970, 220, true);
-add_image_size( 'wpbs-featured-carousel', 970, 400, true);
+add_image_size( 'wpbs-featured', 1170, 290, true );
+add_image_size( 'wpbs-featured-home', 1170, 290, true);
+add_image_size( 'wpbs-featured-carousel', 1140, 400, true);
 
 /* 
 to add more sizes, simply copy a line from above 
@@ -302,7 +302,7 @@ function show_homepage_meta_box() {
                   
                   // textarea  
                   case 'textarea':  
-                      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="80" rows="4">'.$meta.'</textarea> 
+                      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="60" rows="4">'.$meta.'</textarea> 
                           <br /><span class="description">'.$field['desc'].'</span>';  
                   break;  
               } //end switch  

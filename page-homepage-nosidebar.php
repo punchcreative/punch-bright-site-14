@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Homepage + sidebar
+Template Name: Homepage no sidebar
 */
 ?>
 
@@ -20,7 +20,7 @@ Template Name: Homepage + sidebar
 								$post_thumbnail_id = get_post_thumbnail_id();
 								$featured_src = wp_get_attachment_image_src( $post_thumbnail_id, 'wpbs-featured-home' );
 							?>
-                         <img class="header-img img-rounded img-responsive" src="<?php echo $featured_src[0]; ?>" alt="<?php get_post_meta($post->ID, 'custom_tagline' , true);?>">
+                         <img class="header-img img-rounded img-responsive" src="<?php echo $featured_src[0]; ?>" alt="<?php get_post_meta($post->ID, 'custom_tagline' , true);?>" width="1170" height="290">
 							<!-- <div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
 				
 								<div class="page-header">
@@ -33,21 +33,15 @@ Template Name: Homepage + sidebar
 						
 						<section class="row post_content">
 						
-							<div class="col-sm-8">
+							<div class="col-sm-12">
 						
 								<?php the_content(); ?>
 								
 							</div>
 							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
+							<?php //get_sidebar('sidebar2'); // sidebar 2 ?>
 													
 						</section> <!-- end article header -->
-						
-						<footer>
-			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-							
-						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
@@ -79,4 +73,4 @@ Template Name: Homepage + sidebar
     
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+<?php get_footer('fullwidth'); ?>

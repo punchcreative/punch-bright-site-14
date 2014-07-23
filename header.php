@@ -14,7 +14,6 @@
 		
         <!-- icons & favicons -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		
 		<!-- media-queries.js (fallback) -->
 		<!--[if lt IE 9]>
 			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
@@ -31,6 +30,7 @@
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
 				
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	</head>
 	
 	<body <?php body_class(); ?>>

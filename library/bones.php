@@ -53,7 +53,7 @@ add_filter('excerpt_more', 'wp_bootstrap_excerpt_more');
 function wp_bootstrap_theme_support() {
 	add_theme_support('post-thumbnails');      // wp thumbnails (sizes handled in functions.php)
 	set_post_thumbnail_size(125, 125, true);   // default thumb size
-	add_theme_support( 'custom-background' );  // wp custom background
+	add_theme_support('custom-background');    // wp custom background
 	add_theme_support('automatic-feed-links'); // rss thingy
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 	// adding post format support
@@ -88,13 +88,13 @@ add_action( 'widgets_init', 'wp_bootstrap_register_sidebars' );
 function wp_bootstrap_main_nav() {
 	// display the wp3 menu if available
     wp_nav_menu( 
-    	array( 
-    		'menu' => 'main_nav', /* menu name */
-    		'menu_class' => 'nav navbar-nav',
+    	array(     		
     		'theme_location' => 'main_nav', /* where in the theme it's assigned */
     		'container' => 'false', /* container class */
+           'menu' => 'main_nav', /* menu name */
+    		'menu_class' => 'nav navbar-nav',
     		'fallback_cb' => 'wp_bootstrap_main_nav_fallback', /* menu fallback */
-    		// 'depth' => '2',  suppress lower levels for now 
+    		'depth' => 0,  /* show all levels */
     		'walker' => new Bootstrap_walker()
     	)
     );
@@ -104,9 +104,9 @@ function wp_bootstrap_footer_links() {
 	// display the wp3 menu if available
     wp_nav_menu(
     	array(
-    		'menu' => 'footer_links', /* menu name */
     		'theme_location' => 'footer_links', /* where in the theme it's assigned */
-    		'container_class' => 'footer-links clearfix', /* container class */
+           'container_class' => 'footer-links clearfix', /* container class */
+           'menu' => 'footer_links', /* menu name */
     		'fallback_cb' => 'wp_bootstrap_footer_links_fallback' /* menu fallback */
     	)
 	);
